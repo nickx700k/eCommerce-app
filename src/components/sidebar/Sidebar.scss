@@ -1,0 +1,477 @@
+.sidebar {
+  width: 200px;
+  background-color: var(--white-1);
+
+  height: 100vh;
+  &--container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    &--profile {
+      width: 100%;
+      background-color: var(--purple-1);
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      &--image {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+      }
+    }
+    &--allPart {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 1rem;
+      &--part {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &--div--a {
+          display: flex;
+
+          justify-content: left;
+          gap: 20px;
+          flex-direction: row-reverse;
+          text-decoration: none;
+          padding: 0.7rem;
+          background-color: var(--black-1);
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease-in;
+          &--h3 {
+            color: var(--white-1);
+            font-size: 1.2rem;
+          }
+          &--icon {
+            color: var(--white-1);
+            font-size: 1.5rem;
+          }
+        }
+
+        &--div--a:hover {
+          background-color: var(--pink-1);
+        }
+        &--div--div {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          gap: 10px;
+          flex-direction: row-reverse;
+          text-decoration: none;
+          padding: 0.7rem;
+          background-color: var(--black-1);
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease-in;
+
+          &--h3 {
+            color: var(--white-1);
+            font-size: 1rem;
+          }
+          &--icon {
+            color: var(--white-1);
+            font-size: 1.5rem;
+          }
+        }
+
+        &--div--div:hover {
+          background-color: var(--pink-1);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+    height: 40px;
+    &--container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+
+      flex-direction: row;
+      gap: 30px;
+      &--profile {
+        width: 50px;
+        height: 100%;
+
+        &--image {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      &--allPart {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0.2rem;
+        &--part {
+          gap: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+
+          &--div--a {
+            gap: 5px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.7rem;
+            }
+          }
+
+          &--div--div {
+            gap: 5px;
+
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: 40px;
+    &--container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+
+      &--profile {
+        width: 50px;
+        height: 100%;
+
+        &--image {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      &--allPart {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0.5rem;
+        &--part {
+          gap: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+
+          &--div--a {
+            gap: 5px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.7rem;
+            }
+          }
+
+          &--div--div {
+            gap: 5px;
+
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 40px;
+    &--container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+
+      &--profile {
+        width: 70px;
+        height: 100%;
+
+        &--image {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &--allPart {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0.9rem;
+        &--part {
+          gap: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+
+          &--div--a {
+            gap: 5px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.9rem;
+            }
+          }
+
+          &--div--div {
+            gap: 5px;
+
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .sidebar {
+    width: 80px;
+    height: 98vh;
+    &--container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &--profile {
+        padding: 0.1rem;
+
+        &--image {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      &--allPart {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0.5rem;
+        &--part {
+          gap: 10px;
+          &--div--a {
+            gap: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 1.5rem;
+            }
+          }
+
+          &--div--div {
+            width: 40px;
+            height: 40px;
+
+            &--h3 {
+              display: none;
+            }
+            &--icon {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .sidebar {
+    width: 170px;
+
+    &--container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &--profile {
+        padding: 0.1rem;
+
+        &--image {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      &--allPart {
+        gap: 20px;
+
+        padding: 0.5rem;
+        &--part {
+          gap: 20px;
+          &--div--a {
+            gap: 20px;
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+
+            &--h3 {
+              font-size: 0.8rem;
+            }
+            &--icon {
+              font-size: 1.5rem;
+            }
+          }
+
+          &--div--div {
+            width: 120px;
+            height: 60px;
+
+            &--h3 {
+              font-size: 0.8rem;
+            }
+            &--icon {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .sidebar {
+    width: 200px;
+
+    &--container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &--profile {
+        padding: 0.1rem;
+
+        &--image {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      &--allPart {
+        gap: 20px;
+
+        padding: 0.5rem;
+        &--part {
+          gap: 20px;
+          &--div--a {
+            gap: 20px;
+            width: 130px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+
+            &--h3 {
+              font-size: 0.9rem;
+            }
+            &--icon {
+              font-size: 1.7rem;
+            }
+          }
+
+          &--div--div {
+            width: 120px;
+            height: 60px;
+
+            &--h3 {
+              font-size: 0.9rem;
+            }
+            &--icon {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

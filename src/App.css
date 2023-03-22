@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.page-item {
+  cursor: pointer;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.27rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-1: #ecf0f1;
+  --black-1: #242424;
+  --whiteDark: #bdc3c7;
+  --orange-1: #ff9a00;
+  --orangeDark: #ff4900;
+  --yellow-1: #fff100;
+  --yellowDark: #c4ce02;
+  --green-1: #23f216;
+  --greenDark: #18bb04;
+  --blue-1: #00daff;
+  --blueDark: #0091ff;
+  --purple-1: #285fff;
+  --purpleDark: #0535c2;
+  --pink-1: #d827ff;
+  --pinkDark: #9d00c0;
+  --red-1: #ff1414;
+  --redDark: #a90000;
+}
+
+.App--container {
+  display: flex;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.page-title2 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .App--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .App--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .App--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

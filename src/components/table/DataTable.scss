@@ -1,0 +1,89 @@
+.table {
+  border: 1px solid var(--black-1);
+}
+
+.Table {
+  &--container {
+    &--thead {
+      background-color: var(--pink-1);
+      color: var(--white-1);
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .table {
+    font-size: 0.3rem !important;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0.1rem 0.4rem !important;
+  }
+  .table .rounded-circle {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 0.175rem 0.5rem 0.175rem 0.5rem !important;
+    font-size: 0.3rem !important;
+    line-height: 0.5 !important;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .table {
+    font-size: 0.5rem !important;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0.1rem 0.4rem !important;
+  }
+  .table .rounded-circle {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 0.175rem 0.5rem 0.175rem 0.5rem !important;
+    font-size: 0.3rem !important;
+    line-height: 0.5 !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .table {
+    font-size: 0.7rem !important;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0.2rem 0.6rem !important;
+  }
+  .table .rounded-circle {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 0.275rem 0.5rem 0.275rem 0.5rem !important;
+    font-size: 0.6rem !important;
+    line-height: 0.5 !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .table {
+    font-size: 0.9rem !important;
+  }
+  .table > :not(caption) > * > * {
+    padding: 0.4rem 0.8rem !important;
+  }
+  .table .rounded-circle {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .btn-sm,
+  .btn-group-sm > .btn {
+    padding: 0.375rem 0.5rem 0.375rem 0.5rem !important;
+    font-size: 0.9rem !important;
+    line-height: 0.5 !important;
+  }
+}

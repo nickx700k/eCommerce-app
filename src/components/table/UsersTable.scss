@@ -1,0 +1,9 @@
+.UserTable {
+  width: 100%;
+  &--container {
+    &--thead {
+      background-color: var(--pink-1);
+      color: var(--white-1);
+    }
+  }
+}

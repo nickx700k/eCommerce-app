@@ -1,0 +1,89 @@
+.theme {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  background-color: var(--pink-1);
+  width: 300px;
+  border-radius: 15px;
+  display: block;
+  z-index: 99;
+  &--container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    &--mode {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &--span {
+        color: var(--white-1);
+        font-size: 1.5rem;
+      }
+      &--item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        &--button {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  background-color: var(--black-1);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.light {
+  background-color: var(--white-1);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--black-1);
+  }
+}
+
+.blue {
+  background-color: var(--blue-1);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+.red {
+  background-color: var(--red-1);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}

@@ -1,0 +1,44 @@
+.Pagination {
+  background-color: var(--pinkDark);
+
+  &--container {
+    &--item {
+      &--link {
+        color: var(--white-1);
+      }
+    }
+  }
+}
+
+.page-item {
+  padding: 0.3rem;
+}
+
+.page-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .page-link {
+    font-size: 0.3rem !important;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .page-link {
+    font-size: 0.5rem !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .page-link {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .page-link {
+    font-size: 0.8rem !important;
+  }
+}
