@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./UsersTable.scss";
 import {
   MDBBadge,
@@ -9,8 +9,11 @@ import {
 } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { ThemeContext } from "../../pages/theme/ThemeProvider";
 
 export default function Table({ data, header }) {
+  const { color } = useContext(ThemeContext);
+
   const [username, setUserName] = useState("");
 
   useEffect(() => {
@@ -21,7 +24,7 @@ export default function Table({ data, header }) {
     <div className="UserTable">
       <div className="UserTable--container">
         <MDBTable align="middle">
-          <MDBTableHead className="UserTable--container--thead">
+          <MDBTableHead className={`UserTable--container--thead ${color}`}>
             <tr>
               {header &&
                 header.map((item, index) => <th key={index}>{item?.title}</th>)}

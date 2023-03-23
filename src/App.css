@@ -29,6 +29,7 @@ body {
 
 :root {
   --white-1: #ecf0f1;
+  --white-2: #f6f6f6;
   --black-1: #242424;
   --whiteDark: #bdc3c7;
   --orange-1: #ff9a00;
@@ -38,13 +39,14 @@ body {
   --green-1: #23f216;
   --greenDark: #18bb04;
   --blue-1: #00daff;
-  --blueDark: #0091ff;
+  --blueDark: #0977d6;
   --purple-1: #285fff;
   --purpleDark: #0535c2;
   --pink-1: #d827ff;
   --pinkDark: #9d00c0;
   --red-1: #ff1414;
   --redDark: #a90000;
+  --transition: all 0.3s ease-out;
 }
 
 .App--container {

@@ -3,6 +3,7 @@ import "./Home.scss";
 import Table from "../../components/table/DataTable";
 import Pagination from "../../components/pagination/Pagination";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../pages/theme/ThemeProvider";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -10,6 +11,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage, setItempPerPage] = useState(5);
+  const { color, mode } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,11 +41,11 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={`home `}>
+    <div className={`home ${mode}`}>
       <div className="home--container">
         <div className="home--container--table">
           <button
-            className="home--container--table--add"
+            className={`home--container--table--add ${color}`}
             onClick={() => navigate("/create")}
           >
             Add New Customer

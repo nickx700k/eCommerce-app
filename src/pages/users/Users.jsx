@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Users.scss";
 import Table from "../../components/table/UsersTable";
 import Pagination from "../../components/pagination/Pagination";
+import { ThemeContext } from "../theme/ThemeProvider";
 
 const Users = () => {
+  const { color, mode } = useContext(ThemeContext);
   const [account, setAccount] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemPerPage, setItempPerPage] = useState(5);
@@ -46,7 +48,7 @@ const Users = () => {
   const nPage = Math.ceil(account.length / itemPerPage);
 
   return (
-    <div className="users">
+    <div className={`users ${mode}`}>
       <div className="users--container">
         <div className="users--container--table">
           <Table data={currentitems} header={header} />

@@ -1,6 +1,7 @@
 .home {
   position: relative;
   width: 100%;
+  transition: var(--transition);
   &--container {
     padding: 2rem;
     &--table {

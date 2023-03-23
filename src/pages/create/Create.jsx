@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Create.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../theme/ThemeProvider";
 
 const Create = () => {
+  const { color, mode } = useContext(ThemeContext);
   const [data, setData] = useState({});
   const [temp, setTemp] = useState(null);
   const [title, setTitle] = useState("");
@@ -45,7 +47,7 @@ const Create = () => {
   };
 
   return (
-    <div className="create">
+    <div className={`create ${mode}`}>
       <div className="create--container">
         <i
           onClick={() => navigate("/")}
@@ -53,7 +55,7 @@ const Create = () => {
         ></i>
         <div className="page-title2">Create Customer</div>
         <form className="create--container--form" onSubmit={handleSubmit}>
-          <div className="create--container--form--allPart">
+          <div className={`create--container--form--allPart ${color}`}>
             <div className="create--container--form--allPart--part">
               <img
                 src="https://up.20script.ir/file/edb5-nickx700k.jpg"
@@ -196,7 +198,9 @@ const Create = () => {
               </div>
             </div>
           </div>
-          <button className="create--container--form--button">Create</button>
+          <button className={`create--container--form--button ${color}`}>
+            Create
+          </button>
         </form>
       </div>
     </div>

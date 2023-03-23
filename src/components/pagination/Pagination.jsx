@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Pagination.scss";
 import {
   MDBPagination,
@@ -7,8 +7,10 @@ import {
 } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { ThemeContext } from "../../pages/theme/ThemeProvider";
 
 export default function Pagination({ nPage, currentPage, setCurrentPage }) {
+  const { color } = useContext(ThemeContext);
   const pageNumbers = [...Array(nPage + 1).keys()].slice(1);
 
   const nextPage = () => {
@@ -20,7 +22,7 @@ export default function Pagination({ nPage, currentPage, setCurrentPage }) {
   };
 
   return (
-    <div className="Pagination">
+    <div className={`Pagination ${color}`}>
       <MDBPagination className="Pagination--container">
         <MDBPaginationItem className="Pagination--container--item">
           <MDBPaginationLink

@@ -1,6 +1,6 @@
 .Pagination {
   background-color: var(--pinkDark);
-
+  transition: var(--transition);
   &--container {
     &--item {
       &--link {

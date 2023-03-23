@@ -3,17 +3,44 @@
   left: 50%;
   bottom: 1%;
   background-color: var(--pink-1);
-  width: 300px;
+  width: 500px;
   border-radius: 15px;
   display: block;
   z-index: 99;
+  transition: var(--transition);
   &--container {
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: left;
     flex-direction: column;
+    gap: 20px;
     &--mode {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 55px;
+      &--span {
+        color: var(--white-1);
+        font-size: 1.5rem;
+      }
+      &--item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        &--button {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    &--color {
       width: 100%;
       display: flex;
       align-items: center;
@@ -54,7 +81,7 @@
 }
 
 .light {
-  background-color: var(--white-1);
+  background-color: var(--white-2);
   span,
   h1,
   h2,
@@ -66,7 +93,7 @@
 }
 
 .blue {
-  background-color: var(--blue-1);
+  background-color: var(--blueDark);
   span,
   h1,
   h2,
@@ -78,6 +105,66 @@
 }
 .red {
   background-color: var(--red-1);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.yellow {
+  background-color: var(--yellowDark);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.orange {
+  background-color: var(--orangeDark);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.green {
+  background-color: var(--greenDark);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.purple {
+  background-color: var(--purpleDark);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--white-1);
+  }
+}
+
+.pink {
+  background-color: var(--pinkDark);
   span,
   h1,
   h2,

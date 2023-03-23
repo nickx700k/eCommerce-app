@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Sidebar.scss";
 import { Link, useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../pages/theme/ThemeProvider";
 
 const Sidebar = () => {
+  const { color } = useContext(ThemeContext);
   const [profile, setProfile] = useState(null);
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar--container">
-        <div className="sidebar--container--profile">
+        <div className={`sidebar--container--profile ${color}`}>
           <img
             src={profile}
             alt="no photo"
@@ -34,6 +36,7 @@ const Sidebar = () => {
             <div className="sidebar--container--allPart--part--div">
               <Link
                 to={"/"}
+                style={{}}
                 className="sidebar--container--allPart--part--div--a"
               >
                 <h3 className="sidebar--container--allPart--part--div--a--h3">

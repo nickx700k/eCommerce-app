@@ -23,7 +23,7 @@ export default function Theme() {
   const themeColor = [
     {
       id: "blue",
-      background: "var(--blue-1)",
+      background: "var(--blueDark)",
 
       className: "blue",
     },
@@ -32,10 +32,35 @@ export default function Theme() {
       background: "var(--red-1)",
       className: "red",
     },
+    {
+      id: "yellow",
+      background: "var(--yellowDark)",
+      className: "yellow",
+    },
+    {
+      id: "orange",
+      background: "var(--orangeDark)",
+      className: "orange",
+    },
+    {
+      id: "green",
+      background: "var(--greenDark)",
+      className: "green",
+    },
+    {
+      id: "purple",
+      background: "var(--purpleDark)",
+      className: "purple",
+    },
+    {
+      id: "pink",
+      background: "var(--pinkDark)",
+      className: "pink",
+    },
   ];
 
   return (
-    <div className={`theme ${mode}`}>
+    <div className={`theme ${mode === "dark" ? "light" : "dark"}`}>
       <div className="theme--container">
         <div className="theme--container--mode">
           <span className="theme--container--mode--span">Theme Mode</span>
@@ -53,7 +78,7 @@ export default function Theme() {
             ))}
           </div>
         </div>
-        <div className="theme--container--mode">
+        <div className="theme--container--color">
           <span className="theme--container--mode--span">Theme Color</span>
           <div className="theme--container--mode--item">
             {themeColor.map((item, index) => (

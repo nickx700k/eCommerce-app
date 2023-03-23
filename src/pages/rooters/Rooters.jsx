@@ -30,19 +30,24 @@ const Rooters = () => {
       ) : (
         <>
           {loc.includes("/create") ? (
-            <Routes>
-              <Route path="/create" element={<Create />} />
-            </Routes>
+            <ThemeProvider>
+              <Routes>
+                <Route path="/create" element={<Create />} />
+              </Routes>
+            </ThemeProvider>
           ) : (
             <>
               {loc.includes("/edit") ? (
-                <Routes>
-                  <Route path="/edit/:id" element={<Edit />} />
-                </Routes>
+                <ThemeProvider>
+                  <Routes>
+                    <Route path="/edit/:id" element={<Edit />} />
+                  </Routes>
+                </ThemeProvider>
               ) : (
                 <>
-                  <Sidebar />
                   <ThemeProvider>
+                    <Sidebar />
+
                     <Theme />
                     <Routes>
                       <Route exact path="/" element={<Home />} />

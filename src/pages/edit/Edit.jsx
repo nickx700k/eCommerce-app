@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Edit.scss";
 import axios from "axios";
+import { ThemeContext } from "../theme/ThemeProvider";
 
 const Edit = () => {
+  const { color, mode } = useContext(ThemeContext);
   const [oneUser, setOneUser] = useState(null);
   const [title, setTitle] = useState("");
   const [addTitle, setAddTitle] = useState([]);
@@ -70,15 +72,18 @@ const Edit = () => {
   };
 
   return (
-    <div className="edit">
+    <div className={`edit ${mode}`}>
       <div className="edit--container">
         <i
           onClick={handleExit}
           className="bx bx-exit edit--container--icon"
         ></i>
         <div className="page-title">Edit</div>
-        <form className="edit--container--form" onSubmit={handleSubmit}>
-          <div className="edit--container--form--allPart">
+        <form
+          className={`edit--container--form ${color}`}
+          onSubmit={handleSubmit}
+        >
+          <div className="edit--container--form--allPart ">
             <div className="edit--container--form--allPart--part1">
               <img
                 src={oneUser?.profile}
@@ -140,6 +145,7 @@ const Edit = () => {
                   <option value="UI/UX">UI/UX</option>
                 </select>
                 <i
+                  style={{ color: `${color}` }}
                   onClick={handleAddTitle}
                   className="bx bx-plus edit--container--form--allPart--part2--div--icon"
                 ></i>
@@ -249,7 +255,12 @@ const Edit = () => {
               </div>
             </div>
           </div>
-          <button className="edit--container--form--button">Update</button>
+          <button
+            style={{ color: color }}
+            className="edit--container--form--button"
+          >
+            Update
+          </button>
         </form>
       </div>
     </div>
