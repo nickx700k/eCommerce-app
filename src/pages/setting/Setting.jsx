@@ -5,7 +5,6 @@ import { ThemeContext } from "../theme/ThemeProvider";
 import axios from "axios";
 
 const Setting = () => {
-  const [account, setAccount] = useState({});
   const [fullName, setFullName] = useState("");
   const [photo, setPhoto] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +15,7 @@ const Setting = () => {
   const username = sessionStorage.getItem("username");
   useEffect(() => {
     const fetchSetting = async () => {
-      fetch(`http://localhost:3001/users/${username}`)
+      await fetch(`http://localhost:3001/users/${username}`)
         .then((response) => response.json())
         .then((res) => {
           setFullName(res?.fullName);
