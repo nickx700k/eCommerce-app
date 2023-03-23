@@ -1,0 +1,94 @@
+.settings {
+  width: 100%;
+  height: 100vh;
+  transition: var(--transition);
+  &--container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &--icon {
+      position: absolute;
+      cursor: pointer;
+      font-size: 2.5rem;
+      top: 15px;
+      right: 15px;
+    }
+    &--form {
+      transition: var(--transition);
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translateX(-50%);
+      width: 500px;
+      background-color: var(--blueDark);
+      padding: 1rem;
+      color: var(--white-1);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &--parts {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 80px;
+        &--part1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &--photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+          }
+        }
+        &--part2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 50px;
+
+          &--div {
+            display: flex;
+            width: 100%;
+            padding: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            &--h2 {
+              font-size: 1.5rem;
+            }
+            &--input {
+              width: 70%;
+              height: 30px;
+              border: none;
+              outline: none;
+              padding: 0.3rem;
+              border-radius: 5px;
+            }
+            &--select {
+              width: 70%;
+              height: 30px;
+              border-radius: 5px;
+              padding-left: 0.5rem;
+            }
+          }
+        }
+      }
+      &--action {
+        margin: 0 auto;
+        padding: 2rem;
+        &--button {
+          width: 200px;
+          height: 45px;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

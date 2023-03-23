@@ -56,6 +56,7 @@ export default function Table({ data, header }) {
                   </td>
                   <td>
                     <MDBBadge
+                      style={{ color: "#fff" }}
                       color={username === item?.id ? "success" : "danger"}
                       pill
                     >

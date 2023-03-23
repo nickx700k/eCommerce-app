@@ -43,7 +43,7 @@ const Login = () => {
     setLoading(true);
     try {
       user.map((item) => {
-        if (item?.email === data?.email) {
+        if (item?.email === data?.email && item?.password === data?.password) {
           sessionStorage.setItem("username", item?.id);
           sessionStorage.setItem("profile", item?.photo);
           setProfile(item?.photo);

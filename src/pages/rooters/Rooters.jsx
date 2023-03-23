@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Login from "../login/Login";
 import Home from "../home/Home";
-import About from "../about/About";
+
 import Create from "../create/Create";
 import Setting from "../setting/Setting";
 import Users from "../users/Users";
@@ -51,7 +51,6 @@ const Rooters = () => {
                     <Theme />
                     <Routes>
                       <Route exact path="/" element={<Home />} />
-                      <Route path="/aboutus" element={<About />} />
 
                       <Route path="/settings" element={<Setting />} />
                       <Route path="/users" element={<Users />} />

@@ -60,6 +60,7 @@ export default function Table({ data, header }) {
                   </td>
                   <td>
                     <MDBBadge
+                      style={{ color: "#fff" }}
                       color={
                         item?.status === "Active"
                           ? "success"

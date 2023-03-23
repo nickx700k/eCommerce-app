@@ -60,17 +60,6 @@ const Sidebar = () => {
           <div className="sidebar--container--allPart--part">
             <div className="sidebar--container--allPart--part--div">
               <Link
-                to={"/aboutus"}
-                className="sidebar--container--allPart--part--div--a"
-              >
-                <h3 className="sidebar--container--allPart--part--div--a--h3">
-                  About Us
-                </h3>
-                <i className="bx bx-question-mark sidebar--container--allPart--part--div--a--icon"></i>
-              </Link>
-            </div>
-            <div className="sidebar--container--allPart--part--div">
-              <Link
                 to={"/settings"}
                 className="sidebar--container--allPart--part--div--a"
               >
